@@ -1,7 +1,13 @@
 ﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
 @using Umbraco.Core
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using UmbracoCMS.Controllers
 @{
+
+    using (Html.BeginUmbracoForm<ContactController>("Index"))
+    {
+        <input type="submit" value="button" />
+    }
     Layout = null;
 
     // Get basic design settings from the homepage
